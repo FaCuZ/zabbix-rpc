@@ -1,0 +1,234 @@
+# TO DO:
+## Basic
+- [ ] Load config from .env
+- [ ] Sync version of all methods 
+- [ ] A generic call z1.call('host.get', param)
+- [ ] JSDoc
+- [ ] Autologin
+
+## Methods Implemented:
+Progress: 223 / 4 = 1.8%
+- [ ] action
+	- [ ] action/create
+	- [ ] action/delete
+	- [ ] action/get
+	- [ ] action/update
+- [ ] alert
+	- [ ] alert/get
+- [x] apiinfo
+	- [x] apiinfo/version
+- [ ] application
+	- [ ] application/create
+	- [ ] application/delete
+	- [ ] application/get
+	- [ ] application/massadd
+	- [ ] application/update
+- [ ] map
+	- [ ] map/create
+	- [ ] map/delete
+	- [ ] map/get
+	- [ ] map/update
+- [ ] configuration
+	- [ ] configuration/export
+	- [ ] configuration/import
+- [ ] iconmap
+	- [ ] iconmap/create
+	- [ ] iconmap/delete
+	- [ ] iconmap/get
+	- [ ] iconmap/update
+- [ ] correlation
+	- [ ] correlation/create
+	- [ ] correlation/delete
+	- [ ] correlation/get
+	- [ ] correlation/update
+- [ ] trigger
+	- [ ] trigger/adddependencies
+	- [ ] trigger/create
+	- [ ] trigger/delete
+	- [ ] trigger/deletedependencies
+	- [ ] trigger/get
+	- [ ] trigger/update
+- [ ] screen
+	- [ ] screen/create
+	- [ ] screen/delete
+	- [ ] screen/get
+	- [ ] screen/update
+- [ ] templatescreen
+	- [ ] templatescreen/copy
+	- [ ] templatescreen/create
+	- [ ] templatescreen/delete
+	- [ ] templatescreen/get
+	- [ ] templatescreen/update
+- [ ] item
+	- [ ] item/create
+	- [ ] item/delete
+	- [ ] item/get
+	- [ ] item/update
+- [ ] screenitem
+	- [ ] screenitem/create
+	- [ ] screenitem/delete
+	- [ ] screenitem/get
+	- [ ] screenitem/update
+	- [ ] screenitem/updatebyposition
+- [ ] templatescreenitem
+	- [ ] templatescreenitem/get
+- [ ] graphitem
+	- [ ] graphitem/get
+- [ ] event
+	- [ ] event/acknowledge
+	- [ ] event/get
+- [ ] graph
+	- [ ] graph/create
+	- [ ] graph/delete
+	- [ ] graph/get
+	- [ ] graph/update
+- [ ] hostgroup
+	- [ ] hostgroup/create
+	- [ ] hostgroup/delete
+	- [ ] hostgroup/get
+	- [ ] hostgroup/massadd
+	- [ ] hostgroup/massremove
+	- [ ] hostgroup/massupdate
+	- [ ] hostgroup/update
+- [ ] usergroup
+	- [ ] usergroup/create
+	- [ ] usergroup/delete
+	- [ ] usergroup/get
+	- [ ] usergroup/update
+- [ ] history
+	- [ ] history/get
+- [ ] host
+	- [ ] host/create
+	- [ ] host/delete
+	- [ ] host/get
+	- [ ] host/massadd
+	- [ ] host/massremove
+	- [ ] host/massupdate
+	- [ ] host/update
+- [ ] dhost
+	- [ ] dhost/get
+- [ ] image
+	- [ ] image/create
+	- [ ] image/delete
+	- [ ] image/get
+	- [ ] image/update
+- [ ] hostinterface
+	- [ ] hostinterface/create
+	- [ ] hostinterface/delete
+	- [ ] hostinterface/get
+	- [ ] hostinterface/massadd
+	- [ ] hostinterface/massremove
+	- [ ] hostinterface/replacehostinterfaces
+	- [ ] hostinterface/update
+- [ ] usermacro
+	- [ ] usermacro/create
+	- [ ] usermacro/createglobal
+	- [ ] usermacro/delete
+	- [ ] usermacro/deleteglobal
+	- [ ] usermacro/get
+	- [ ] usermacro/update
+	- [ ] usermacro/updateglobal
+- [ ] maintenance
+	- [ ] maintenance/create
+	- [ ] maintenance/delete
+	- [ ] maintenance/get
+	- [ ] maintenance/update
+- [ ] template
+	- [ ] template/create
+	- [ ] template/delete
+	- [ ] template/get
+	- [ ] template/massadd
+	- [ ] template/massremove
+	- [ ] template/massupdate
+	- [ ] template/update
+- [ ] problem
+	- [ ] problem/get
+- [ ] hostprototype
+	- [ ] hostprototype/create
+	- [ ] hostprototype/delete
+	- [ ] hostprototype/get
+	- [ ] hostprototype/update
+- [ ] itemprototype
+	- [ ] itemprototype/create
+	- [ ] itemprototype/delete
+	- [ ] itemprototype/get
+	- [ ] itemprototype/update
+- [ ] triggerprototype
+	- [ ] triggerprototype/create
+	- [ ] triggerprototype/delete
+	- [ ] triggerprototype/get
+	- [ ] triggerprototype/update
+- [ ] graphprototype
+	- [ ] graphprototype/create
+	- [ ] graphprototype/delete
+	- [ ] graphprototype/get
+	- [ ] graphprototype/update
+- [ ] proxy
+	- [ ] proxy/create
+	- [ ] proxy/delete
+	- [ ] proxy/get
+	- [ ] proxy/update
+- [ ] drule
+	- [ ] drule/create
+	- [ ] drule/delete
+	- [ ] drule/get
+	- [ ] drule/update
+- [ ] discoveryrule
+	- [ ] discoveryrule/copy
+	- [ ] discoveryrule/create
+	- [ ] discoveryrule/delete
+	- [ ] discoveryrule/get
+	- [ ] discoveryrule/update
+- [ ] script
+	- [ ] script/create
+	- [ ] script/delete
+	- [ ] script/execute
+	- [ ] script/get
+	- [ ] script/getscriptsbyhosts
+	- [ ] script/update
+- [ ] httptest
+	- [ ] httptest/create
+	- [ ] httptest/delete
+	- [ ] httptest/get
+	- [ ] httptest/update
+- [ ] service
+	- [ ] service/adddependencies
+	- [ ] service/addtimes
+	- [ ] service/create
+	- [ ] service/delete
+	- [ ] service/deletedependencies
+	- [ ] service/deletetimes
+	- [ ] service/get
+	- [ ] service/getsla
+	- [ ] service/update
+- [ ] dservice
+	- [ ] dservice/get
+- [ ] dashboard
+	- [ ] dashboard/create
+	- [ ] dashboard/delete
+	- [ ] dashboard/get
+	- [ ] dashboard/update
+- [ ] valuemap
+	- [ ] valuemap/create
+	- [ ] valuemap/delete
+	- [ ] valuemap/get
+	- [ ] valuemap/update
+- [ ] trend
+	- [ ] trend/get
+- [ ] dcheck
+	- [ ] dcheck/get
+- [ ] mediatype
+	- [ ] mediatype/create
+	- [ ] mediatype/delete
+	- [ ] mediatype/get
+	- [ ] mediatype/update
+- [ ] task
+	- [ ] task/create
+- [x] user
+	- [ ] user/user.checkauthentication
+	- [ ] user/create
+	- [ ] user/delete
+	- [ ] user/get
+	- [x] user/login
+	- [ ] user/logout
+	- [ ] user/update

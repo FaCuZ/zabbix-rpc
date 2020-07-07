@@ -2,7 +2,7 @@
   "name": "zabbix-rpc",
   "version": "0.1.0",
   "description": "A powerfull Zabbix API integration.",
-  "main": "lib.js",
+  "main": "Zabbix.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

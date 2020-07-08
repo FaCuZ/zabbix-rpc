@@ -1,27 +1,41 @@
 const User = require('./lib/User')
-const req = require('./request')
+const Request = require('./Request')
 
+/**
+ * @constructs Zabbix
+ *
+ * @param {string} [host] - Set the host of Zabbix server
+ * @param {string} [user] - Set the user name 
+ * @param {string} [pass] - Set the password
+ */
 const Zabbix = function (host, user, pass) {
 	this.host = host || "localhost"
-	this.username = user || "guest"
-	this.pass = pass || ""
-	this.user = new User(this.host, this.username, this.pass)
-	this.req_id = 0
+	this.req = new Request(this.host)
+	this.user = new User(this.req, user, pass)
 };
 
-Zabbix.prototype.version = function (){	
-	return req.fetch(this.host, req.jsonrpc("apiinfo.version"))
+/**
+ * This method allows to retrieve the version of the Zabbix API.
+ * 
+ * @returns {Promise.<string>} Retrieve the version of the Zabbix API. 
+ */
+Zabbix.prototype.version = async function (){	
+	return this.req.jsonrpc("apiinfo.version", [], false)
 		.then((data) => {
-			console.log(data.result)
+			this.version = data.result
+			return data.result
 		})
 }
 
 
-Zabbix.prototype.call = function (){	
-	return req.fetch(this.host, req.jsonrpc("apiinfo.version"))
-		.then((data) => {
-			console.log(data.result)
-		})
+/**
+ *	Execute a basic jsonrpc command.
+ *
+ * @param {Object} jsonrpc - JSON RPC that performs one specific task.
+ * @returns {Promise.<string>} A promise to a result.
+ */
+Zabbix.prototype.call = function (jsonrpc){	
+	return this.req.fetch(jsonrpc).then((data) => data.result)
 }
 
 

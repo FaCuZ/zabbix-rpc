@@ -6,14 +6,14 @@
 - [ ] Autologin.
 
 ## Methods Implemented:
-Progress: 7 of 223 = 3%
+Progress: 13 of 223 = 6%
 - [ ] action
 	- [ ] create
 	- [ ] delete
 	- [ ] get
 	- [ ] update
-- [ ] alert
-	- [ ] get
+- [x] alert
+	- [x] get
 - [x] apiinfo
 	- [x] version
 - [ ] application
@@ -69,7 +69,7 @@ Progress: 7 of 223 = 3%
 	- [ ] get
 	- [ ] update
 	- [ ] updatebyposition
-- [ ] templatescreenitem
+- [ ] templatescreenitem 
 	- [ ] get
 - [ ] graphitem
 	- [ ] get
@@ -94,8 +94,8 @@ Progress: 7 of 223 = 3%
 	- [ ] delete
 	- [ ] get
 	- [ ] update
-- [ ] history
-	- [ ] get
+- [x] history
+	- [x] get
 - [ ] host
 	- [ ] create
 	- [ ] delete
@@ -140,8 +140,8 @@ Progress: 7 of 223 = 3%
 	- [ ] massremove
 	- [ ] massupdate
 	- [ ] update
-- [ ] problem
-	- [ ] get
+- [x] problem
+	- [x] get
 - [ ] hostprototype
 	- [ ] create
 	- [ ] delete

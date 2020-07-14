@@ -1,17 +1,22 @@
-const User = require('./lib/User')
 const Request = require('./Request')
+const User = require('./lib/User')
+const Alert = require('./lib/Alert')
+const Problem = require('./lib/Problem')
 
 /**
  * @constructs Zabbix
  *
- * @param {string} [host] - Set the host of Zabbix server
- * @param {string} [user] - Set the user name 
- * @param {string} [pass] - Set the password
+ * @param {string} [host] - Set the host of Zabbix server.
+ * @param {string} [user] - Set the user name.
+ * @param {string} [pass] - Set the password.
  */
 const Zabbix = function (host, user, pass) {
 	this.host = host || "localhost"
 	this.req = new Request(this.host)
+	
 	this.user = new User(this.req, user, pass)
+	this.alert = new Alert(this.req)
+	this.problem = new Problem(this.req)
 };
 
 /**

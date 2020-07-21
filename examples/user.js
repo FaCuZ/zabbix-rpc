@@ -1,6 +1,7 @@
 const Zabbix = require('../Zabbix.js')
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
+const show = data => console.log(data)
 
 async function test() {
 	const z1 = new Zabbix('localhost', 'user', 'pass')
@@ -19,9 +20,10 @@ async function test() {
 	 	
 	await sleep(1000)
 
-	z1.user.check(z1.req.auth).then(data => console.log(data))
+	z1.user.check(z1.req.auth).then(show)
 	
-	z1.user.get({"output": "extend"}).then(data => console.log(data))	
+	z1.user.get({"output": "extend"}).then(show)	
+
 }
 
 test()

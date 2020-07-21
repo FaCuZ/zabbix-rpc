@@ -1,7 +1,13 @@
 const Request = require('./Request')
+
 const User = require('./lib/User')
 const Alert = require('./lib/Alert')
 const Problem = require('./lib/Problem')
+const Action = require('./lib/Action')
+const Map = require('./lib/Map')
+const Correlation = require('./lib/Correlation')
+const Image = require('./lib/Image')
+const Proxy = require('./lib/Proxy')
 
 /**
  * @constructs Zabbix
@@ -15,9 +21,14 @@ const Zabbix = function (host, user, pass) {
 	this.req = new Request(this.host)
 	
 	this.user = new User(this.req, user, pass)
+	this.action = new Action(this.req)
 	this.alert = new Alert(this.req)
+	this.correlation = new Correlation(this.req)
 	this.problem = new Problem(this.req)
-};
+	this.map = new Map(this.req)
+	this.image = new Image(this.req)	
+	this.proxy = new Proxy(this.req)
+}
 
 /**
  * This method allows to retrieve the version of the Zabbix API.

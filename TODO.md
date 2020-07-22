@@ -7,7 +7,7 @@
 - [ ] Autoversion.
 
 ## Methods Implemented:
-Progress: 54 of 223 = 24%
+Progress: 72 of 223 = 32%
 - [x] action
 	- [x] create
 	- [x] delete
@@ -49,18 +49,19 @@ Progress: 54 of 223 = 24%
 	- [x] get
 	- [x] update
 
-- [ ] trigger
-	- [ ] adddependencies
-	- [ ] create
-	- [ ] delete
-	- [ ] deletedependencies
-	- [ ] get
-	- [ ] update
-	- [ ] prototype (triggerprototype)
-		- [ ] create
-		- [ ] delete
-		- [ ] get
-		- [ ] update
+- [x] trigger
+	- [x] create
+	- [x] delete
+	- [x] get
+	- [x] update
+	- [x] prototype (triggerprototype)
+		- [x] create
+		- [x] delete
+		- [x] get
+		- [x] update
+	- [x] dependencies
+		- [x] add (adddependencies)
+		- [x] delete (deletedependencies)
 
 - [ ] screen
 	- [ ] create
@@ -141,11 +142,11 @@ Progress: 54 of 223 = 24%
 	- [x] get
 	- [x] update
 
-- [ ] maintenance
-	- [ ] create
-	- [ ] delete
-	- [ ] get
-	- [ ] update
+- [x] maintenance
+	- [x] create
+	- [x] delete
+	- [x] get
+	- [x] update
 
 - [ ] template
 	- [ ] create

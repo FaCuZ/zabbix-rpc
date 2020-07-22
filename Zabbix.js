@@ -8,6 +8,8 @@ const Map = require('./lib/Map')
 const Correlation = require('./lib/Correlation')
 const Image = require('./lib/Image')
 const Proxy = require('./lib/Proxy')
+const Trigger = require('./lib/Trigger')
+const Maintenance = require('./lib/Maintenance')
 
 /**
  * @constructs Zabbix
@@ -28,6 +30,8 @@ const Zabbix = function (host, user, pass) {
 	this.map = new Map(this.req)
 	this.image = new Image(this.req)	
 	this.proxy = new Proxy(this.req)
+	this.trigger = new Trigger(this.req)
+	this.maintenance = new Maintenance(this.req)
 }
 
 /**
@@ -35,7 +39,7 @@ const Zabbix = function (host, user, pass) {
  * 
  * @returns {Promise.<string>} Retrieve the version of the Zabbix API. 
  */
-Zabbix.prototype.version = async function (){	
+Zabbix.prototype.version = () => {	
 	return this.req.jsonrpc("apiinfo.version", [], false)
 		.then((data) => {
 			this.version = data.result
@@ -50,8 +54,9 @@ Zabbix.prototype.version = async function (){
  * @param {Object} jsonrpc - JSON RPC that performs one specific task.
  * @returns {Promise.<string>} A promise to a result.
  */
-Zabbix.prototype.call = function (jsonrpc){	
-	return this.req.fetch(jsonrpc).then((data) => data.result)
+Zabbix.prototype.call = (jsonrpc) => {	
+	return this.req.fetch(jsonrpc)
+		.then((data) => data.result)
 }
 
 

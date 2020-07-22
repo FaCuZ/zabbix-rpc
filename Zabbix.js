@@ -11,6 +11,7 @@ const Proxy = require('./lib/Proxy')
 const Trigger = require('./lib/Trigger')
 const Maintenance = require('./lib/Maintenance')
 const Application = require('./lib/Application')
+const Host = require('./lib/Host')
 
 /**
  * @constructs Zabbix
@@ -20,10 +21,9 @@ const Application = require('./lib/Application')
  * @param {string} [pass] - Set the password.
  */
 const Zabbix = function (host, user, pass) {
-	this.host = host || "localhost"
-	this.req = new Request(this.host)
+	this.req = new Request(host || "localhost")
 
-	// TODO: Login here?
+	// TODO: Auto login here?
 	
 	this.user = new User(this.req, user, pass)
 	this.action = new Action(this.req)
@@ -36,6 +36,7 @@ const Zabbix = function (host, user, pass) {
 	this.trigger = new Trigger(this.req)
 	this.maintenance = new Maintenance(this.req)
 	this.application = new Application(this.req)
+	this.host = new Host(this.req)
 }
 
 /**

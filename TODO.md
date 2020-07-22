@@ -7,7 +7,7 @@
 - [ ] Autoversion.
 
 ## Methods Implemented:
-Progress: 77 of 223 = 32%
+Progress: 97 of 230 = 42%
 - [x] action
 	- [x] create
 	- [x] delete
@@ -25,8 +25,8 @@ Progress: 77 of 223 = 32%
 	- [x] delete
 	- [x] get
 	- [x] update
-	- [ ] mass
-		- [ ] add (massadd)
+	- [x] mass
+		- [x] add (massadd)
 
 - [x] map
 	- [x] create
@@ -107,24 +107,24 @@ Progress: 77 of 223 = 32%
 - [x] history
 	- [x] get
 
-- [ ] host
-	- [ ] create
-	- [ ] delete
-	- [ ] get
-	- [ ] update
-	- [ ] mass
-		- [ ] add (massadd)
-		- [ ] remove (massremove)
-		- [ ] update (massupdate)
-	- [ ] group (hostgroup)
-		- [ ] create
-		- [ ] delete
-		- [ ] get
-		- [ ] update
-		- [ ] mass
-			- [ ] add (massadd)
-			- [ ] remove (massremove)
-			- [ ] update (massupdate)
+- [x] host
+	- [x] create
+	- [x] delete
+	- [x] get
+	- [x] update
+	- [x] mass
+		- [x] add (massadd)
+		- [x] remove (massremove)
+		- [x] update (massupdate)
+	- [x] group (hostgroup)
+		- [x] create
+		- [x] delete
+		- [x] get
+		- [x] update
+		- [x] mass
+			- [x] add (massadd)
+			- [x] remove (massremove)
+			- [x] update (massupdate)
 	- [ ] interface (hostinterface)
 		- [ ] create
 		- [ ] delete

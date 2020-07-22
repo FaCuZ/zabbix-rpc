@@ -10,6 +10,7 @@ const Image = require('./lib/Image')
 const Proxy = require('./lib/Proxy')
 const Trigger = require('./lib/Trigger')
 const Maintenance = require('./lib/Maintenance')
+const Application = require('./lib/Application')
 
 /**
  * @constructs Zabbix
@@ -21,6 +22,8 @@ const Maintenance = require('./lib/Maintenance')
 const Zabbix = function (host, user, pass) {
 	this.host = host || "localhost"
 	this.req = new Request(this.host)
+
+	// TODO: Login here?
 	
 	this.user = new User(this.req, user, pass)
 	this.action = new Action(this.req)
@@ -32,6 +35,7 @@ const Zabbix = function (host, user, pass) {
 	this.proxy = new Proxy(this.req)
 	this.trigger = new Trigger(this.req)
 	this.maintenance = new Maintenance(this.req)
+	this.application = new Application(this.req)
 }
 
 /**

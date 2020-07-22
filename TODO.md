@@ -7,7 +7,7 @@
 - [ ] Autoversion.
 
 ## Methods Implemented:
-Progress: 72 of 223 = 32%
+Progress: 77 of 223 = 32%
 - [x] action
 	- [x] create
 	- [x] delete
@@ -20,12 +20,13 @@ Progress: 72 of 223 = 32%
 - [x] apiinfo
 	- [x] version
 
-- [ ] application
-	- [ ] create
-	- [ ] delete
-	- [ ] get
-	- [ ] massadd
-	- [ ] update
+- [x] application
+	- [x] create
+	- [x] delete
+	- [x] get
+	- [x] update
+	- [ ] mass
+		- [ ] add (massadd)
 
 - [x] map
 	- [x] create
@@ -110,26 +111,29 @@ Progress: 72 of 223 = 32%
 	- [ ] create
 	- [ ] delete
 	- [ ] get
-	- [ ] massadd
-	- [ ] massremove
-	- [ ] massupdate
 	- [ ] update
+	- [ ] mass
+		- [ ] add (massadd)
+		- [ ] remove (massremove)
+		- [ ] update (massupdate)
 	- [ ] group (hostgroup)
 		- [ ] create
 		- [ ] delete
 		- [ ] get
-		- [ ] massadd
-		- [ ] massremove
-		- [ ] massupdate
 		- [ ] update
+		- [ ] mass
+			- [ ] add (massadd)
+			- [ ] remove (massremove)
+			- [ ] update (massupdate)
 	- [ ] interface (hostinterface)
 		- [ ] create
 		- [ ] delete
 		- [ ] get
-		- [ ] massadd
-		- [ ] massremove
-		- [ ] replacehostinterfaces
 		- [ ] update
+		- [ ] replacehostinterfaces
+		- [ ] mass
+			- [ ] add (massadd)
+			- [ ] remove (massremove)
 	- [ ] prototype (hostprototype)
 		- [ ] create
 		- [ ] delete
@@ -152,10 +156,11 @@ Progress: 72 of 223 = 32%
 	- [ ] create
 	- [ ] delete
 	- [ ] get
-	- [ ] massadd
-	- [ ] massremove
-	- [ ] massupdate
 	- [ ] update
+	- [ ] mass
+		- [ ] add (massadd)
+		- [ ] remove (massremove)
+		- [ ] update (massupdate)
 	- [ ] screen (templatescreen)
 		- [ ] copy
 		- [ ] create

@@ -7,7 +7,7 @@
 - [ ] Autoversion.
 
 ## Methods Implemented:
-Progress: 41 of 223 = 18%
+Progress: 54 of 223 = 24%
 - [x] action
 	- [x] create
 	- [x] delete
@@ -135,9 +135,6 @@ Progress: 41 of 223 = 18%
 		- [ ] get
 		- [ ] update
 
-- [ ] dhost
-	- [ ] get
-
 - [x] image
 	- [x] create
 	- [x] delete
@@ -176,19 +173,6 @@ Progress: 41 of 223 = 18%
 	- [x] get
 	- [x] update
 
-- [ ] drule
-	- [ ] create
-	- [ ] delete
-	- [ ] get
-	- [ ] update
-
-- [ ] discoveryrule
-	- [ ] copy
-	- [ ] create
-	- [ ] delete
-	- [ ] get
-	- [ ] update
-
 - [ ] script
 	- [ ] create
 	- [ ] delete
@@ -217,6 +201,25 @@ Progress: 41 of 223 = 18%
 - [ ] dservice
 	- [ ] get
 
+- [ ] dhost
+	- [ ] get
+	
+- [ ] dcheck
+	- [ ] get
+
+- [ ] drule
+	- [ ] create
+	- [ ] delete
+	- [ ] get
+	- [ ] update
+
+- [ ] discoveryrule
+	- [ ] copy
+	- [ ] create
+	- [ ] delete
+	- [ ] get
+	- [ ] update
+
 - [ ] dashboard
 	- [ ] create
 	- [ ] delete
@@ -230,9 +233,6 @@ Progress: 41 of 223 = 18%
 	- [ ] update
 
 - [ ] trend
-	- [ ] get
-
-- [ ] dcheck
 	- [ ] get
 
 - [ ] mediatype
@@ -252,16 +252,16 @@ Progress: 41 of 223 = 18%
 	- [x] login
 	- [x] logout
 	- [x] update
-	- [ ] group (usergroup)
-		- [ ] create
-		- [ ] delete
-		- [ ] get
-		- [ ] update
-	- [ ] macro (usermacro)
-		- [ ] create
-		- [ ] createglobal
-		- [ ] delete
-		- [ ] deleteglobal
-		- [ ] get
-		- [ ] update
-		- [ ] updateglobal
+	- [x] group (usergroup)
+		- [x] create
+		- [x] delete
+		- [x] get
+		- [x] update
+	- [x] macro (usermacro)
+		- [x] create
+		- [x] createglobal
+		- [x] delete
+		- [x] deleteglobal
+		- [x] get
+		- [x] update
+		- [x] updateglobal

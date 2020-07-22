@@ -24,6 +24,10 @@ async function test() {
 	
 	z1.user.get({"output": "extend"}).then(show)	
 
+	z1.user.group.get()
+
+	z1.user.macro.update([], true) // Global macro
+
 }
 
 test()

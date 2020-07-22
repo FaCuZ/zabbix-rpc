@@ -12,6 +12,7 @@ const Trigger = require('./lib/Trigger')
 const Maintenance = require('./lib/Maintenance')
 const Application = require('./lib/Application')
 const Host = require('./lib/Host')
+const Item = require('./lib/Item')
 
 /**
  * @constructs Zabbix
@@ -37,6 +38,7 @@ const Zabbix = function (host, user, pass) {
 	this.maintenance = new Maintenance(this.req)
 	this.application = new Application(this.req)
 	this.host = new Host(this.req)
+	this.item = new Item(this.req)
 }
 
 /**

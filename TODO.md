@@ -7,7 +7,7 @@
 - [ ] Autoversion.
 
 ## Methods Implemented:
-Progress: 97 of 230 = 42%
+Progress: 121 of 230 = 52%
 - [x] action
 	- [x] create
 	- [x] delete
@@ -76,16 +76,16 @@ Progress: 97 of 230 = 42%
 		- [ ] update
 		- [ ] updatebyposition
 
-- [ ] item
-	- [ ] create
-	- [ ] delete
-	- [ ] get
-	- [ ] update
-	- [ ] prototype (itemprototype)
-		- [ ] create
-		- [ ] delete
-		- [ ] get
-		- [ ] update
+- [x] item
+	- [x] create
+	- [x] delete
+	- [x] get
+	- [x] update
+	- [x] prototype (itemprototype)
+		- [x] create
+		- [x] delete
+		- [x] get
+		- [x] update
 
 - [ ] event
 	- [ ] acknowledge
@@ -125,20 +125,20 @@ Progress: 97 of 230 = 42%
 			- [x] add (massadd)
 			- [x] remove (massremove)
 			- [x] update (massupdate)
-	- [ ] interface (hostinterface)
-		- [ ] create
-		- [ ] delete
-		- [ ] get
-		- [ ] update
-		- [ ] replacehostinterfaces
-		- [ ] mass
-			- [ ] add (massadd)
-			- [ ] remove (massremove)
-	- [ ] prototype (hostprototype)
-		- [ ] create
-		- [ ] delete
-		- [ ] get
-		- [ ] update
+	- [x] interface (hostinterface)
+		- [x] create
+		- [x] delete
+		- [x] get
+		- [x] update
+		- [x] replacehostinterfaces
+		- [x] mass
+			- [x] add (massadd)
+			- [x] remove (massremove)
+	- [x] prototype (hostprototype)
+		- [x] create
+		- [x] delete
+		- [x] get
+		- [x] update
 
 - [x] image
 	- [x] create

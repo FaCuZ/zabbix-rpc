@@ -13,12 +13,19 @@ const Maintenance = require('./lib/Maintenance')
 const Application = require('./lib/Application')
 const Host = require('./lib/Host')
 const Item = require('./lib/Item')
+const Dashboard = require('./lib/Dashboard')
+const Configuration = require('./lib/Configuration')
+const Trend = require('./lib/Trend')
+const Screen = require('./lib/Screen')
+const Graph = require('./lib/Graph')
+const Httptest = require('./lib/Httptest') //web scenario
+const Script = require('./lib/Script')
 
 /**
  * @constructs Zabbix
  *
  * @param {string} [host] - Set the host of Zabbix server.
- * @param {string} [user] - Set the user name.
+ * @param {string} [user] - Set the username.
  * @param {string} [pass] - Set the password.
  */
 const Zabbix = function (host, user, pass) {
@@ -39,6 +46,13 @@ const Zabbix = function (host, user, pass) {
 	this.application = new Application(this.req)
 	this.host = new Host(this.req)
 	this.item = new Item(this.req)
+	this.dashboard = new Dashboard(this.req)
+	this.configuration = new Configuration(this.req)
+	this.trend = new Trend(this.req)
+	this.screen = new Screen(this.req)
+	this.graph = new Graph(this.req)
+	this.httptest = new Httptest(this.req)
+	this.script = new Script(this.req)
 }
 
 /**

@@ -7,7 +7,7 @@
 - [ ] Autoversion.
 
 ## Methods Implemented:
-Progress: 121 of 230 = 52%
+Progress: 166 of 230 = 72%
 - [x] action
 	- [x] create
 	- [x] delete
@@ -34,9 +34,9 @@ Progress: 121 of 230 = 52%
 	- [x] get
 	- [x] update
 
-- [ ] configuration
-	- [ ] export
-	- [ ] import
+- [x] configuration
+	- [x] export
+	- [x] import
 
 - [ ] iconmap
 	- [ ] create
@@ -64,17 +64,17 @@ Progress: 121 of 230 = 52%
 		- [x] add (adddependencies)
 		- [x] delete (deletedependencies)
 
-- [ ] screen
-	- [ ] create
-	- [ ] delete
-	- [ ] get
-	- [ ] update
-	- [ ] item (screenitem)
-		- [ ] create
-		- [ ] delete
-		- [ ] get
-		- [ ] update
-		- [ ] updatebyposition
+- [x] screen
+	- [x] create
+	- [x] delete
+	- [x] get
+	- [x] update
+	- [x] item (screenitem)
+		- [x] create
+		- [x] delete
+		- [x] get
+		- [x] update
+		- [x] updatebyposition
 
 - [x] item
 	- [x] create
@@ -91,18 +91,18 @@ Progress: 121 of 230 = 52%
 	- [ ] acknowledge
 	- [ ] get
 
-- [ ] graph
-	- [ ] create
-	- [ ] delete
-	- [ ] get
-	- [ ] update
-	- [ ] item (graphitem)
-		- [ ] get
-	- [ ] prototype (graphprototype)
-		- [ ] create
-		- [ ] delete
-		- [ ] get
-		- [ ] update
+- [x] graph
+	- [x] create
+	- [x] delete
+	- [x] get
+	- [x] update
+	- [x] item (graphitem)
+		- [x] get
+	- [x] prototype (graphprototype)
+		- [x] create
+		- [x] delete
+		- [x] get
+		- [x] update
 
 - [x] history
 	- [x] get
@@ -179,19 +179,19 @@ Progress: 121 of 230 = 52%
 	- [x] get
 	- [x] update
 
-- [ ] script
-	- [ ] create
-	- [ ] delete
-	- [ ] execute
-	- [ ] get
-	- [ ] getscriptsbyhosts
-	- [ ] update
+- [x] script
+	- [x] create
+	- [x] delete
+	- [x] execute
+	- [x] get
+	- [x] getscriptsbyhosts
+	- [x] update
 
-- [ ] httptest
-	- [ ] create
-	- [ ] delete
-	- [ ] get
-	- [ ] update
+- [x] httptest
+	- [x] create
+	- [x] delete
+	- [x] get
+	- [x] update
 
 - [ ] service
 	- [ ] adddependencies
@@ -226,11 +226,11 @@ Progress: 121 of 230 = 52%
 	- [ ] get
 	- [ ] update
 
-- [ ] dashboard
-	- [ ] create
-	- [ ] delete
-	- [ ] get
-	- [ ] update
+- [x] dashboard
+	- [x] create
+	- [x] delete
+	- [x] get
+	- [x] update
 
 - [ ] valuemap
 	- [ ] create
@@ -238,8 +238,8 @@ Progress: 121 of 230 = 52%
 	- [ ] get
 	- [ ] update
 
-- [ ] trend
-	- [ ] get
+- [x] trend
+	- [x] get
 
 - [ ] mediatype
 	- [ ] create
@@ -251,7 +251,7 @@ Progress: 121 of 230 = 52%
 	- [ ] create
 
 - [x] user
-	- [x] checkauthentication
+	- [x] check (checkauthentication)
 	- [x] create
 	- [x] delete
 	- [x] get

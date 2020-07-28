@@ -6,8 +6,8 @@
 - [ ] Autologin.
 - [ ] Autoversion.
 
-## Methods Implemented:
-Progress: 166 of 230 = 72%
+## Methods Implemented: 34+198
+Progress: 198 of 230 = 86%
 - [x] action
 	- [x] create
 	- [x] delete
@@ -87,9 +87,9 @@ Progress: 166 of 230 = 72%
 		- [x] get
 		- [x] update
 
-- [ ] event
-	- [ ] acknowledge
-	- [ ] get
+- [x] event
+	- [x] acknowledge
+	- [x] get
 
 - [x] graph
 	- [x] create
@@ -152,23 +152,23 @@ Progress: 166 of 230 = 72%
 	- [x] get
 	- [x] update
 
-- [ ] template
-	- [ ] create
-	- [ ] delete
-	- [ ] get
-	- [ ] update
-	- [ ] mass
-		- [ ] add (massadd)
-		- [ ] remove (massremove)
-		- [ ] update (massupdate)
-	- [ ] screen (templatescreen)
-		- [ ] copy
-		- [ ] create
-		- [ ] delete
-		- [ ] get
-		- [ ] update
-		- [ ] item (templatescreenitem) 
-			- [ ] get
+- [x] template
+	- [x] create
+	- [x] delete
+	- [x] get
+	- [x] update
+	- [x] mass
+		- [x] add (massadd)
+		- [x] remove (massremove)
+		- [x] update (massupdate)
+	- [x] screen (templatescreen)
+		- [x] copy
+		- [x] create
+		- [x] delete
+		- [x] get
+		- [x] update
+		- [x] item (templatescreenitem) 
+			- [x] get
 
 - [x] problem
 	- [x] get
@@ -193,16 +193,18 @@ Progress: 166 of 230 = 72%
 	- [x] get
 	- [x] update
 
-- [ ] service
-	- [ ] adddependencies
-	- [ ] addtimes
-	- [ ] create
-	- [ ] delete
-	- [ ] deletedependencies
-	- [ ] deletetimes
-	- [ ] get
-	- [ ] getsla
-	- [ ] update
+- [x] service
+	- [x] create
+	- [x] delete
+	- [x] get
+	- [x] getsla
+	- [x] update
+	- [x] times
+		- [x] add (addtimes)
+		- [x] delete (deletetimes)
+	- [x] dependencies
+		- [x] add (adddependencies)
+		- [x] delete (deletedependencies)
 
 - [ ] dservice
 	- [ ] get

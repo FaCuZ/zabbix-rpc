@@ -20,6 +20,9 @@ const Screen = require('./lib/Screen')
 const Graph = require('./lib/Graph')
 const Httptest = require('./lib/Httptest') //web scenario
 const Script = require('./lib/Script')
+const Event = require('./lib/Event')
+const Template = require('./lib/Template')
+const Service = require('./lib/Service')
 
 /**
  * @constructs Zabbix
@@ -30,6 +33,7 @@ const Script = require('./lib/Script')
  */
 const Zabbix = function (host, user, pass) {
 	this.req = new Request(host || "localhost")
+	this.apiversion = ['4','1','0'] 
 
 	// TODO: Auto login here?
 	
@@ -53,6 +57,10 @@ const Zabbix = function (host, user, pass) {
 	this.graph = new Graph(this.req)
 	this.httptest = new Httptest(this.req)
 	this.script = new Script(this.req)
+	this.event = new Event(this.req)
+	this.template = new Template(this.req)
+	this.service = new Service(this.req)
+
 }
 
 /**
@@ -60,7 +68,7 @@ const Zabbix = function (host, user, pass) {
  * 
  * @returns {Promise.<string>} Retrieve the version of the Zabbix API. 
  */
-Zabbix.prototype.version = () => {	
+Zabbix.prototype.version = function () {	
 	return this.req.jsonrpc("apiinfo.version", [], false)
 		.then((data) => {
 			this.version = data.result
@@ -75,7 +83,7 @@ Zabbix.prototype.version = () => {
  * @param {Object} jsonrpc - JSON RPC that performs one specific task.
  * @returns {Promise.<string>} A promise to a result.
  */
-Zabbix.prototype.call = (jsonrpc) => {	
+Zabbix.prototype.call = function (jsonrpc) {	
 	return this.req.fetch(jsonrpc)
 		.then((data) => data.result)
 }

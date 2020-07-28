@@ -19,7 +19,7 @@ Request.prototype.jsonrpc = function (method, params = [], needAuth = true){
 
 
 Request.prototype.fetch = function (jsonrpc){	
-	return axios.post('http://' + this.host + '/zabbix/api_jsonrpc.php', jsonrpc)
+	return axios.post('http://' + this.host + '/api_jsonrpc.php', jsonrpc)
 		.then(function (response) {
 			//console.log(response.data);
 			if(response.data.error) {

@@ -6,8 +6,8 @@
 - [ ] Autologin.
 - [ ] Autoversion.
 
-## Methods Implemented: 34+198
-Progress: 198 of 230 = 86%
+## Methods Implemented:
+Progress: 231 of 231 = 100% 
 - [x] action
 	- [x] create
 	- [x] delete
@@ -38,11 +38,11 @@ Progress: 198 of 230 = 86%
 	- [x] export
 	- [x] import
 
-- [ ] iconmap
-	- [ ] create
-	- [ ] delete
-	- [ ] get
-	- [ ] update
+- [x] iconmap
+	- [x] create
+	- [x] delete
+	- [x] get
+	- [x] update
 
 - [x] correlation
 	- [x] create
@@ -206,27 +206,24 @@ Progress: 198 of 230 = 86%
 		- [x] add (adddependencies)
 		- [x] delete (deletedependencies)
 
-- [ ] dservice
-	- [ ] get
-
-- [ ] dhost
-	- [ ] get
+- [x] discovered
+	- [x] service (dservice)
+		- [x] get
+	- [x] host (dhost)
+		- [x] get
 	
-- [ ] dcheck
-	- [ ] get
+- [x] discovery
+	- [x] dcheck (dcheck)
+		- [x] get
+	- [x] drule (drule)
+		- [x] create
+		- [x] delete
+		- [x] get
+		- [x] update
 
-- [ ] drule
-	- [ ] create
-	- [ ] delete
-	- [ ] get
-	- [ ] update
-
-- [ ] discoveryrule
-	- [ ] copy
-	- [ ] create
-	- [ ] delete
-	- [ ] get
-	- [ ] update
+- [x] autoregistration 
+	- [x] get
+	- [x] update
 
 - [x] dashboard
 	- [x] create
@@ -234,23 +231,23 @@ Progress: 198 of 230 = 86%
 	- [x] get
 	- [x] update
 
-- [ ] valuemap
-	- [ ] create
-	- [ ] delete
-	- [ ] get
-	- [ ] update
+- [x] valuemap
+	- [x] create
+	- [x] delete
+	- [x] get
+	- [x] update
 
 - [x] trend
 	- [x] get
 
-- [ ] mediatype
-	- [ ] create
-	- [ ] delete
-	- [ ] get
-	- [ ] update
+- [x] mediatype
+	- [x] create
+	- [x] delete
+	- [x] get
+	- [x] update
 
-- [ ] task
-	- [ ] create
+- [x] task
+	- [x] create
 
 - [x] user
 	- [x] check (checkauthentication)

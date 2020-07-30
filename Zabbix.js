@@ -23,6 +23,13 @@ const Script = require('./lib/Script')
 const Event = require('./lib/Event')
 const Template = require('./lib/Template')
 const Service = require('./lib/Service')
+const History = require('./lib/History')
+const Iconmap = require('./lib/Iconmap')
+const Valuemap = require('./lib/Valuemap')
+const Task = require('./lib/Task')
+const Autoregistration = require('./lib/Autoregistration')
+const Discovered = require('./lib/Discovered')
+const Discovery = require('./lib/Discovery')
 
 /**
  * @constructs Zabbix
@@ -33,7 +40,7 @@ const Service = require('./lib/Service')
  */
 const Zabbix = function (host, user, pass) {
 	this.req = new Request(host || "localhost")
-	this.apiversion = ['4','1','0'] 
+	this.apiversion = ''
 
 	// TODO: Auto login here?
 	
@@ -60,6 +67,13 @@ const Zabbix = function (host, user, pass) {
 	this.event = new Event(this.req)
 	this.template = new Template(this.req)
 	this.service = new Service(this.req)
+	this.history = new History(this.req)
+	this.iconmap = new Iconmap(this.req)
+	this.valuemap = new Valuemap(this.req)
+	this.task = new Task(this.req)
+	this.autoregistration = new Autoregistration(this.req)
+	this.discovered = new Discovered(this.req)
+	this.discovery = new Discovery(this.req)
 
 }
 
@@ -71,7 +85,7 @@ const Zabbix = function (host, user, pass) {
 Zabbix.prototype.version = function () {	
 	return this.req.jsonrpc("apiinfo.version", [], false)
 		.then((data) => {
-			this.version = data.result
+			this.apiversion = data.result
 			return data.result
 		})
 }

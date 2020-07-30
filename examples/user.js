@@ -4,29 +4,29 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 const show = data => console.log(data)
 
 async function test() {
-	const z1 = new Zabbix('localhost', 'user', 'pass')
+	const z = new Zabbix('localhost/zabbix')
 
-	z1.user.login()
+	z.user.login('user', 'pass')
 	
 	await sleep(1000)
 
-	console.log("Auth hash:", z1.req.auth)
+	console.log("Auth hash:", z.req.auth)
 
-	z1.user.logout()
+	z.user.logout()
 
 	await sleep(1000)
 
-	z1.user.login('user2', 'pass')
+	z.user.login('user2', 'pass')
 	 	
 	await sleep(1000)
 
-	z1.user.check(z1.req.auth).then(show)
+	z.user.check(z.req.auth).then(show)
 	
-	z1.user.get({"output": "extend"}).then(show)	
+	z.user.get({"output": "extend"}).then(show)	
 
-	z1.user.group.get()
+	z.user.group.get()
 
-	z1.user.macro.update([], true) // Global macro
+	z.user.macro.update([], true) // Global macro
 
 }
 

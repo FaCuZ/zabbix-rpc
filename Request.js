@@ -21,20 +21,27 @@ Request.prototype.jsonrpc = function (method, params = [], needAuth = true){
 Request.prototype.fetch = function (jsonrpc){	
 	return axios.post('http://' + this.host + '/api_jsonrpc.php', jsonrpc)
 		.then(function (response) {
-			//console.log(response.data);
 			if(response.data.error) {
-				console.log('\nError:')
-				console.log(response.data.error)
-				console.log('On:')
-				console.log(jsonrpc)
-				return []
+				let jsonError = { error: response.data.error }
+				jsonError.error.on_rpc = jsonrpc
+				return { result: jsonError }
+				//return { result: { error: response.data.error, on: jsonrpc }}
 			}
 			return response.data
 		})
 		.catch(function (error) {
-			console.log(error)
-			return error
+			return { 
+				result: { 
+					error: { 
+							code: (error.response) ? -1 : error.code, 
+							message: (error.response) ? 'Invalid Zabbix Host' + error.response.status : 'Connection error: ' + error.syscall, 
+							data: (error.response) ? error.response.statusText : error.config.url,
+							on_rpc: jsonrpc
+						}
+					}
+				}
 		})
+
 }
 
 

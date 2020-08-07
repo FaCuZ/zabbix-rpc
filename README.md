@@ -1,4 +1,4 @@
-# Zabbix RCP
+# Zabbix RPC
 
 A powerfull Zabbix API integration.
 

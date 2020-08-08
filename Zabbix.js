@@ -42,7 +42,8 @@ const Zabbix = function (host, user, pass) {
 	this.req = new Request(host || "localhost")
 	this.apiversion = ''
 
-	// TODO: Auto login here?
+	// TODO Auto login here when autologin is true on (host, user, pass, autologin = false)
+	// TODO Login, logout shortcut
 	
 	this.user = new User(this.req, user, pass)
 	this.action = new Action(this.req)

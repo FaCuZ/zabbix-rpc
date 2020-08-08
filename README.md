@@ -19,6 +19,7 @@ $ npm install zabbix-rpc
   * Easy to use methods.
   * Asynchronous calls.
   * Multiple instances.
+  * IDE Friendly documentation.
 
 ## Examples
 

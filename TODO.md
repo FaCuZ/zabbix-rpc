@@ -1,10 +1,13 @@
 # TO DO:
 ## Basic
+- [ ] Documentation.
 - [ ] Load config from .env file.
-- [ ] Sync version of all methods.
-- [ ] Throw exceptions. 
+- [x] ~~Sync version of all methods.~~
+- [x] ~~Throw exceptions.~~ Retrun JSON error.
 - [ ] Autologin.
-- [ ] Autoversion.
+- [ ] Auto check version.
+- [ ] Extra methods like .count()
+- [ ] Login, logout shortcut
 
 ## Methods Implemented:
 Progress: 231 of 231 = 100% 

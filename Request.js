@@ -8,12 +8,13 @@ const Request = function (host) {
 
 Request.prototype.jsonrpc = function (method, params = [], needAuth = true){
 	let auth = needAuth ? this.auth : null
+	
 	return this.fetch({
 			"jsonrpc": "2.0",
 			"method": method,
 			"params": params,
 			"id": this.req_id++,
-			"auth": auth
+			"auth": auth // TODO needAuth ? this.auth : null
 		})
 }
 
@@ -27,21 +28,21 @@ Request.prototype.fetch = function (jsonrpc){
 	let url = 'http://' + this.host + '/api_jsonrpc.php'
 
 	return axios.post(url, jsonrpc, { headers: header })
-		.then(function (response) {
-			// Error if the response is not JSON
-			if(!response.headers['content-type'].includes('application/json')){
-				return error(-1, 'Invalid content type response.', 'Content type: ' + response.headers['content-type'], jsonrpc, url)
+		.then(function (res) {
+			// Error if the response is not JSON.
+			if(!res.headers['content-type'].includes('application/json')){
+				return error(-1, 'Invalid content type response.', 'Content type: ' + res.headers['content-type'], jsonrpc, url)
 			}
 
-			// Error if it comes from zabbix
-			if(response.data.error) {
-				return error(response.data.error.code, response.data.error.message, response.data.error.data, jsonrpc, url)
+			// Error if it comes from zabbix.
+			if(res.data.error) {
+				return error(res.data.error.code, res.data.error.message, res.data.error.data, jsonrpc, url)
 			}
 			
-			return response.data
+			return res.data
 		})
 		.catch(function (err) {
-			// Error if zabbix is ​​not recognizable
+			// Error if zabbix is not recognizable and others errors.
 			return error(
 				(err.response) ? err.response.status || -1 : err.code, 
 				(err.response) ? 'Invalid Zabbix Host.' : 'Connection error: ' + err.syscall,

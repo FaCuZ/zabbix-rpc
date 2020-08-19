@@ -1,6 +1,6 @@
 # TO DO:
 ## Basic
-- [ ] Documentation.
+- [x] Documentation.
 - [ ] Load config from .env file.
 - [x] ~~Sync version of all methods.~~
 - [x] ~~Throw exceptions.~~ Retrun JSON error.

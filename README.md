@@ -1,32 +1,59 @@
-![Zabbix RPC](./doc/Zabbix_logo.png "Zabbix RPC") 
-# Zabbix RPC
+<h1 align="center">
+  <img src="./doc/Zabbix_logo.png" alt="Zabbix RPC">
+  <br>
+  Zabbix RPC
+  <br>
+</h1>
 
-A powerfull and easy to use Zabbix API integration, that allows you to programmatically retrieve and modify the configuration of Zabbix and provides access to historical data. 
+<h4 align="center">A powerfull and easy to use Zabbix API integration</h4>
 
-This package is designed to be as intuitive as possible. 
+<p align="center">
+  <a href="https://www.npmjs.com/package/zabbix-rpc">
+    <img alt="npm" src="https://img.shields.io/npm/v/zabbix-rpc">
+  </a>
+  <a href="https://www.npmjs.com/package/zabbix-rpc">
+    <img alt="npm" src="https://img.shields.io/npm/dt/zabbix-rpc">  
+  </a>
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/facuz/zabbix-rpc">
+  <a href="#license">
+    <img alt="GitHub" src="https://img.shields.io/github/license/FaCuZ/zabbix-rpc">
+  </a>
+</p>
 
-#### Features
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#basic-methods">Methods</a> •
+  <a href="#Basic-parameters">Parameters</a> •
+  <a href="#data-types">Data types</a> •
+  <a href="#license">License</a>
+</p>
+
+## Features
+
+This is a javascript package that allows you to programmatically retrieve and modify the configuration of Zabbix and provides access to historical and monitoring data.
 
 It is widely used to:
 
 - Create new applications to work with Zabbix.
 - Integrate Zabbix with third party software.
 - Automate routine tasks.
+- Get monitoring data.
 
 and provides you:
 
 - Easy to use methods.
 - Asynchronous calls.
-- Multiple instances.
+- Multiple instances and users.
 - IDE Friendly documentation.
 
-### How to use
+## How to use
 
-This is a [Node.js](https://nodejs.org/en/) module available through the [npm registry](https://www.npmjs.com/).
+The package is designed to be as intuitive as possible. 
 
-##### Installation
+#### Installation
 
-It is done using the [`npm install`](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) command:
+This is a [Node.js](https://nodejs.org/en/) module available through the [npm registry](https://www.npmjs.com/). It is done using the [`npm install`](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) command:
 
 ```bash
 $ npm install zabbix-rpc
@@ -38,7 +65,7 @@ Then you must import the package where you want to run it
 const Zabbix = require('zabbix-rpc')
 ```
 
-##### Instances
+#### Instances
 
 You can create multiple instances to use different servers or the same server with different users. For example, to create an instance and log in
 
@@ -54,13 +81,13 @@ The session remains active until `logout()` is called or terminated by the zabbi
 z.user.logout()
 ```
 
-You can check if the session is started by passing the authentication hash as a parameter
+You can check if the session is started by passing the authentication hash as a parameter or leaving it empty to take the previously defined
 
 ```javascript
-z.user.check(z.user.auth).then(console.log)
+z.user.check().then(console.log)
 ```
 
-##### Basic methods
+#### Basic methods
 
 Once you have successfully logged in, you can make any type of query, as long as it is compatible with the server version.
 
@@ -75,7 +102,7 @@ z.version().then(console.log)
 let recentProblems = await z.problem.get({ "recent": true })
 ```
 
-##### Params
+#### Params
 
 As you can see you can pass the parameters allowed by Zabbix as arguments of the methods
 
@@ -103,7 +130,7 @@ let items = await z.item.get({
 })
 ```	
 
-##### Alternative calls:
+#### Alternative calls
 
 If you want, like other packages, you can use the JSON-RPC 2.0 protocol directly with `z.call()`
 
@@ -122,9 +149,9 @@ or its shorter version
 z.call("apiinfo.version", [])
 ```
 
-##### Error handling
+#### Error handling
 
-All errors will be returned as JSON with an "error" variable defined. It will contain details of the error
+All errors will be returned as JSON with an `error` variable defined. It will contain details of the error
 
 ```javascript
 {
@@ -139,16 +166,19 @@ All errors will be returned as JSON with an "error" variable defined. It will co
       id: 5,
       auth: null
     },
-    url: 'http://zabbix.gosit.gcba.gob.ar/api_jsonrpc.php'
+    url: 'http://example.com/zabbix/api_jsonrpc.php'
   }
 }
 ```
 
-### Method list
+## Methods
 
-Currently all the functionalities of versions 3.0 to 5.0 are supported and checked. You can use all these different classes or methods:
+Currently all the functionalities of versions 3.0 to 5.0 are supported and tested. You can use all these different classes or methods:
 
 #### Monitoring
+
+The Zabbix API allows you to access history and other data gathered during monitoring. 
+
 |Class||||||
 |---:|---|---|---|---|---|
 | **history** | `.get()` |
@@ -161,6 +191,9 @@ Currently all the functionalities of versions 3.0 to 5.0 are supported and check
 | **task** | `.create()` |
 
 #### Configuration
+
+The Zabbix API allows you to manage the configuration of your monitoring system. 
+
 |Class||||||
 |---:|---|---|---|---|---|
 | **action** | `.create()` | `.delete()` | `.get()` | `.update()` |
@@ -200,7 +233,10 @@ Currently all the functionalities of versions 3.0 to 5.0 are supported and check
 | **trigger**	| `.create()`	| `.delete()`	| `.get()`	| `.update()` |
 | **trigger.dependencies** | `.add()` | `.delete()` |
 | **trigger.prototype** | `.create()` | `.delete()` | `.get()` | `.update()` |
+
 #### Administration
+
+With the Zabbix API you can change administration settings of your monitoring system. 
 
 |Class||||||
 |---:|---|---|---|---|---|
@@ -217,7 +253,7 @@ Currently all the functionalities of versions 3.0 to 5.0 are supported and check
 
 
 
-#### Basic "get" parameters
+#### Basic parameters
 
 Each classes has its own parameter definitions, but all `.get()` methods have some in common. The following parameters are supported by all `.get()` methods:
 
@@ -239,7 +275,7 @@ Each classes has its own parameter definitions, but all `.get()` methods have so
 
 
 
-##### Data types
+#### Data types
 
 The Zabbix API supports the following data types as input:
 
@@ -257,10 +293,6 @@ The Zabbix API supports the following data types as input:
 | `query` | A value which defines, what data should be returned.<br><br>Can be defined as an array of property names to return only specific properties, or as one of the predefined values:<br>`extend` - returns all object properties.<br>`count` - returns the number of retrieved records, supported only by certain subselects. |
 
 *Zabbix API always returns values as strings or arrays only.*
-
-
-
-Soon I will carry out a more detailed documentation of each function, parameters and options.
 
 ## License
 

@@ -30,6 +30,7 @@ const Task = require('./lib/Task')
 const Autoregistration = require('./lib/Autoregistration')
 const Discovered = require('./lib/Discovered')
 const Discovery = require('./lib/Discovery')
+const Apiinfo = require('./lib/Apiinfo')
 
 /**
  * @constructs Zabbix
@@ -44,6 +45,8 @@ const Zabbix = function (host, user, pass) {
 
 	// TODO Auto login here when autologin is true on (host, user, pass, autologin = false)
 	// TODO Login, logout shortcut
+
+	this.version()
 	
 	this.user = new User(this.req, user, pass)
 	this.action = new Action(this.req)
@@ -75,6 +78,7 @@ const Zabbix = function (host, user, pass) {
 	this.autoregistration = new Autoregistration(this.req)
 	this.discovered = new Discovered(this.req)
 	this.discovery = new Discovery(this.req)
+	this.apiinfo = new Apiinfo(this.req)
 
 }
 
@@ -96,9 +100,17 @@ Zabbix.prototype.version = function () {
  *	Execute a basic jsonrpc command.
  *
  * @param {Object} jsonrpc - JSON RPC that performs one specific task.
+ * @param {Object} params - Parameters defining the desired output. 
  * @returns {Promise.<string>} A promise to a result.
  */
-Zabbix.prototype.call = function (jsonrpc) {	
+Zabbix.prototype.call = function (jsonrpc, params) { 
+	if(params) {
+		const array = ['apiinfo.version', 'user.login']
+
+		return this.req.jsonrpc(jsonrpc, params, (array.indexOf(jsonrpc) > -1) ? false : true)
+			.then((data) => data.result)
+	}
+
 	return this.req.fetch(jsonrpc)
 		.then((data) => data.result)
 }

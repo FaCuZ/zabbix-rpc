@@ -1,16 +1,18 @@
 # TO DO:
 ## Basic
 - [x] Documentation.
+- [ ] Testing and coveralls.
 - [ ] Load config from .env file.
 - [x] ~~Sync version of all methods.~~
 - [x] ~~Throw exceptions.~~ Retrun JSON error.
-- [ ] Autologin.
+- [ ] Auto login.
 - [ ] Auto check version.
 - [ ] Extra methods like .count()
 - [ ] Login, logout shortcut
+- [ ] Remove Axios dependency.
 
 ## Methods Implemented:
-Progress: 231 of 231 = 100% 
+Progress: 231 of 231 = 100%
 - [x] action
 	- [x] create
 	- [x] delete
@@ -170,7 +172,7 @@ Progress: 231 of 231 = 100%
 		- [x] delete
 		- [x] get
 		- [x] update
-		- [x] item (templatescreenitem) 
+		- [x] item (templatescreenitem)
 			- [x] get
 
 - [x] problem
@@ -214,7 +216,7 @@ Progress: 231 of 231 = 100%
 		- [x] get
 	- [x] host (dhost)
 		- [x] get
-	
+
 - [x] discovery
 	- [x] dcheck (dcheck)
 		- [x] get
@@ -224,7 +226,7 @@ Progress: 231 of 231 = 100%
 		- [x] get
 		- [x] update
 
-- [x] autoregistration 
+- [x] autoregistration
 	- [x] get
 	- [x] update
 

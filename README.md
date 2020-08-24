@@ -5,18 +5,21 @@
   <br>
 </h1>
 
-<h4 align="center">A powerfull and easy to use Zabbix API integration</h4>
+<h4 align="center">A powerfull and easy to use Zabbix API integrator</h4>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/zabbix-rpc">
     <img alt="npm" src="https://img.shields.io/npm/v/zabbix-rpc">
   </a>
   <a href="https://www.npmjs.com/package/zabbix-rpc">
-    <img alt="npm" src="https://img.shields.io/npm/dt/zabbix-rpc">  
+    <img alt="npm" src="https://img.shields.io/npm/dt/zabbix-rpc">
+  <a href="https://inch-ci.org/github/FaCuZ/zabbix-rpc">
+    <img alt="Zabbix-rpc documentation" src="https://inch-ci.org/github/facuz/zabbix-rpc.svg?branch=master">
+  </a>
   </a>
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/facuz/zabbix-rpc">
   <a href="#license">
-    <img alt="GitHub" src="https://img.shields.io/github/license/FaCuZ/zabbix-rpc">
+    <img alt="Zabbix-rpc license" src="https://img.shields.io/github/license/FaCuZ/zabbix-rpc">
   </a>
 </p>
 
@@ -49,7 +52,7 @@ and provides you:
 
 ## How to use
 
-The package is designed to be as intuitive as possible. 
+The package is designed to be as intuitive as possible.
 
 #### Installation
 
@@ -75,7 +78,7 @@ const z = new Zabbix('example.com/zabbix')
 z.user.login('username', 'password')
 ```
 
-The session remains active until `logout()` is called or terminated by the zabbix server. It is recommended to always log out at the end to prevent the generation of a large number of open session records. 
+The session remains active until `logout()` is called or terminated by the zabbix server. It is recommended to always log out at the end to prevent the generation of a large number of open session records.
 
 ```javascript
 z.user.logout()
@@ -95,7 +98,7 @@ Since each method makes a request to the server, they will **always return a pro
 
 
 ```javascript
-let hosts = await z.host.get() 
+let hosts = await z.host.get()
 
 z.version().then(console.log)
 
@@ -107,7 +110,7 @@ let recentProblems = await z.problem.get({ "recent": true })
 As you can see you can pass the parameters allowed by Zabbix as arguments of the methods
 
 ```javascript
-let groups = await z.host.group.get({ 
+let groups = await z.host.group.get({
   output: ['groupid', 'name'],
   filter: {
     "name": ['group1', 'group2']
@@ -121,14 +124,14 @@ let hosts = await z.host.get({
 
 let hostids = hosts.map((host) => host.hostid)
 
-let items = await z.item.get({ 
-  hostids: hostids, 
+let items = await z.item.get({
+  hostids: hostids,
   search: {
     "name": ['Ping']
   },
   output: [ 'hostid', 'lastclock', 'lastns', 'lastvalue', 'prevvalue']
 })
-```	
+```
 
 #### Alternative calls
 
@@ -177,7 +180,7 @@ Currently all the functionalities of versions 3.0 to 5.0 are supported and teste
 
 #### Monitoring
 
-The Zabbix API allows you to access history and other data gathered during monitoring. 
+The Zabbix API allows you to access history and other data gathered during monitoring.
 
 |Class||||||
 |---:|---|---|---|---|---|
@@ -192,13 +195,13 @@ The Zabbix API allows you to access history and other data gathered during monit
 
 #### Configuration
 
-The Zabbix API allows you to manage the configuration of your monitoring system. 
+The Zabbix API allows you to manage the configuration of your monitoring system.
 
 |Class||||||
 |---:|---|---|---|---|---|
 | **action** | `.create()` | `.delete()` | `.get()` | `.update()` |
 | **alert** | `.get()` |
-| **application** | `.create()` | `.delete()` | `.get()` | `.update()` | 
+| **application** | `.create()` | `.delete()` | `.get()` | `.update()` |
 | **application.mass** | `.add()` |
 | **autoregistration** | `.get()` | `.update()` |
 | **configuration** | `.export()` | `.import()` |
@@ -236,11 +239,11 @@ The Zabbix API allows you to manage the configuration of your monitoring system.
 
 #### Administration
 
-With the Zabbix API you can change administration settings of your monitoring system. 
+With the Zabbix API you can change administration settings of your monitoring system.
 
 |Class||||||
 |---:|---|---|---|---|---|
-| **user** | `.check()` | `.login()` | `.logout()` | 
+| **user** | `.check()` | `.login()` | `.logout()` |
 | **user** | `.create()` | `.delete()` | `.get()` | `.update()` |
 | **user.group** | `.create()` | `.delete()` | `.get()` | `.update()` |
 | **user.macro** | `.create()` | `.delete()` | `.get()` | `.update()` |

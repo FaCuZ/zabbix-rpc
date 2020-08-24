@@ -1,7 +1,7 @@
 {
   "name": "zabbix-rpc",
-  "version": "1.1.2",
-  "description": "A powerfull Zabbix API integration.",
+  "version": "1.1.3",
+  "description": "A powerfull and easy to use Zabbix API integrator",
   "main": "Zabbix.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,11 +12,13 @@
   },
   "keywords": [
     "zabbix",
-    "jsonrpc"
+	"jsonrpc",
+	"API",
+	"Monitoring"
   ],
   "author": "Facundo Zaldo",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.20.0"
   }
 }

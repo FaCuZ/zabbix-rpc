@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.1.3 (Aug 23, 2020)
+
+- Updated Axios dependency.
+- Editorconfig was added.
+
 ### 1.1.2 (Aug 21, 2020)
 
 - Improved documentation.

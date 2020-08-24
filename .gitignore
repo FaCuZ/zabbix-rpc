@@ -1,4 +1,5 @@
 node_modules
+coverage
 examples/dd.js
 examples/dd2.js
 .vscode

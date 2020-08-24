@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.1.4 (Aug 24, 2020)
+
+- Jest installation.
+- Basic structure of the tests and mocks.
+
 ### 1.1.3 (Aug 23, 2020)
 
 - Updated Axios dependency.
@@ -27,7 +32,3 @@ Autoregistration, Discovery, Discovered, Mediatype, Task, Valuemap, Event, Servi
 ### 0.1.0 (Jul 8, 2020)
 
 - Initial release.
-
-
-
-

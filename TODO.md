@@ -6,7 +6,7 @@
 - [x] ~~Sync version of all methods.~~
 - [x] ~~Throw exceptions.~~ Retrun JSON error.
 - [ ] Auto login.
-- [ ] Auto check version.
+- [x] Auto check version.
 - [ ] Extra methods like .count()
 - [ ] Login, logout shortcut
 - [ ] Remove Axios dependency.

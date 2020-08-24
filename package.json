@@ -1,10 +1,12 @@
 {
   "name": "zabbix-rpc",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "A powerfull and easy to use Zabbix API integrator",
   "main": "Zabbix.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+	"test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -12,13 +14,16 @@
   },
   "keywords": [
     "zabbix",
-	"jsonrpc",
-	"API",
-	"Monitoring"
+    "jsonrpc",
+    "API",
+    "Monitoring"
   ],
   "author": "Facundo Zaldo",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.20.0"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2"
   }
 }

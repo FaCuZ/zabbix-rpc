@@ -9,17 +9,21 @@
 
 <p align="center">
   <a href="https://www.npmjs.com/package/zabbix-rpc">
-    <img alt="npm" src="https://img.shields.io/npm/v/zabbix-rpc">
+    <img alt="npm" src="https://img.shields.io/npm/v/zabbix-rpc.svg">
   </a>
+
   <a href="https://www.npmjs.com/package/zabbix-rpc">
-    <img alt="npm" src="https://img.shields.io/npm/dt/zabbix-rpc">
+    <img alt="npm" src="https://img.shields.io/npm/dt/zabbix-rpc.svg">
+  </a>
+
   <a href="https://inch-ci.org/github/FaCuZ/zabbix-rpc">
-    <img alt="Zabbix-rpc documentation" src="https://inch-ci.org/github/facuz/zabbix-rpc.svg?branch=master">
+    <img alt="Zabbix-rpc documentation" src="https://inch-ci.org/github/facuz/zabbix-rpc.svg">
   </a>
-  </a>
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/facuz/zabbix-rpc">
+
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/facuz/zabbix-rpc.svg">
+
   <a href="#license">
-    <img alt="Zabbix-rpc license" src="https://img.shields.io/github/license/FaCuZ/zabbix-rpc">
+    <img alt="Zabbix-rpc license" src="https://img.shields.io/github/license/FaCuZ/zabbix-rpc.svg">
   </a>
 </p>
 

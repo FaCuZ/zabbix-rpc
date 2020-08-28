@@ -1,12 +1,17 @@
 {
   "name": "zabbix-rpc",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "description": "A powerfull and easy to use Zabbix API integrator",
-  "main": "Zabbix.js",
+  "main": "./lib/Zabbix.js",
+  "files": [
+    "/lib",
+    "/docs"
+  ],
   "scripts": {
-	"test": "jest",
+    "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+	"test:coverage": "jest --coverage",
+	"test:coveralls": "jest --coverage && coveralls < coverage/lcov.info"
   },
   "repository": {
     "type": "git",
@@ -24,6 +29,7 @@
     "axios": "^0.20.0"
   },
   "devDependencies": {
+    "coveralls": "^3.1.0",
     "jest": "^26.4.2"
   }
 }

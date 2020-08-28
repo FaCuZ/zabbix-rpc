@@ -1,7 +1,7 @@
 # TO DO:
 ## Basic
 - [x] Documentation.
-- [ ] Testing and coveralls.
+- [x] Testing and coveralls.
 - [ ] Load config from .env file.
 - [x] ~~Sync version of all methods.~~
 - [x] ~~Throw exceptions.~~ Retrun JSON error.

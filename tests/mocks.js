@@ -5,10 +5,8 @@ const base_mock = {
 	  date: 'Mon, 24 Aug 2020 16:21:40 GMT',
 	  server: 'Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_fcgid/2.3.9 PHP/5.4.16 mod_wsgi/3.4 Python/2.7.5',
 	  'x-powered-by': 'PHP/5.4.16',
-	  'access-control-allow-origin': '*',
 	  'access-control-allow-headers': 'Content-Type',
 	  'access-control-allow-methods': 'POST',
-	  'access-control-max-age': '1000',
 	  'content-length': '400',
 	  connection: 'close',
 	  'content-type': 'application/json'
@@ -24,8 +22,6 @@ const base_mock = {
 		'Content-Length': 130
 	  },
 	  timeout: 0,
-	  xsrfCookieName: 'XSRF-TOKEN',
-	  xsrfHeaderName: 'X-XSRF-TOKEN',
 	  maxContentLength: -1,
 	  maxBodyLength: -1,
 	},
@@ -33,7 +29,6 @@ const base_mock = {
 	  method: 'POST',
 	  insecureHTTPParser: undefined,
 	  path: '/zabbix/api_jsonrpc.php',
-	  _ended: true,
 	  aborted: false,
 	  timeoutCb: null,
 	  upgradeOrConnect: false,
@@ -70,7 +65,7 @@ const base_mock = {
 const login_mock = Object.assign({}, base_mock)
 
 login_mock.data = {
-    jsonrpc: '2.0',
+	jsonrpc: '2.0',
 	result: {
 		sessionid: "1234bd59b807674191e7d77572075f33"
 	}
@@ -79,7 +74,7 @@ login_mock.data = {
  const call_mock = Object.assign({}, base_mock)
 
  call_mock.data = {
-    jsonrpc: '2.0',
+	jsonrpc: '2.0',
 	result: {
 		"jsonrpc": "2.0",
 		"result": "4.0.0",
@@ -87,8 +82,57 @@ login_mock.data = {
 	}
 }
 
+const not_json_mock =  Object.assign({}, base_mock)
+not_json_mock.headers =  Object.assign({}, not_json_mock.headers)
+not_json_mock.headers['content-type'] = 'text/html; charset=utf-8'
+
+
+const has_error_mock =  Object.assign({}, base_mock)
+has_error_mock.data = {
+	error: {
+	  code: 404,
+	  message: 'Invalid Zabbix Host.',
+	  data: 'Not Found',
+	  on_rpc: {
+		jsonrpc: '2.0',
+		method: 'user.checkAuthentication',
+		params: [],
+		id: 2,
+		auth: null
+	  },
+	  url: 'http://localhost/api_jsonrpc.php'
+	}
+  }
+
+const catch_error_mock = { // FIX: Does not catch
+		errno: 'ENOTFOUND',
+		code: 'ENOTFOUND',
+		syscall: 'getaddrinfo',
+		hostname: 'bleble',
+		config: {
+			url: 'http://badserver.com/api_jsonrpc.php',
+			method: 'post',
+			data: '{"jsonrpc":"2.0","method":"apiinfo.version","params":[],"id":0,"auth":null}',
+			headers: {
+				Accept: 'application/json',
+				'Content-Type': 'application/json',
+				'User-Agent': 'axios/0.20.0',
+				'Content-Length': 75
+			},
+			timeout: 0,
+			maxContentLength: -1,
+			maxBodyLength: -1,
+		},
+		response: undefined,
+		isAxiosError: true,
+	}
+
+
 module.exports = {
 	login_mock: login_mock,
 	base_mock: base_mock,
-	call_mock: call_mock
+	call_mock: call_mock,
+	not_json_mock: not_json_mock,
+	has_error_mock: has_error_mock,
+	catch_error_mock: catch_error_mock,
 }

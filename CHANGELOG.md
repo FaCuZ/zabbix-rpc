@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.2.0 (Aug 28, 2020)
+
+- Folder restructure.
+- Now only whitelisted files are sent to npm.
+- Coverage to 66%
+
 ### 1.1.4 (Aug 24, 2020)
 
 - Jest installation.

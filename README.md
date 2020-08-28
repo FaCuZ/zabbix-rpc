@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="./doc/Zabbix_logo.png" alt="Zabbix RPC">
+  <img src="./docs/Zabbix_logo.png" alt="Zabbix RPC">
   <br>
   Zabbix RPC
   <br>
@@ -219,11 +219,11 @@ The Zabbix API allows you to manage the configuration of your monitoring system.
 | **graph.item** | `.get()` |
 | **graph.prototype** | `.create()` | `.delete()` | `.get()` | `.update()` |
 | **host** | `.create()` | `.delete()` | `.get()` | `.update()` |
+| **host.mass** | `.add()` | `.remove()` | `.update()` |
 | **host.group** | `.create()` | `.delete()` | `.get()` | `.update()` |
 | **host.group.mass** | `.add()` | `.remove()` | `.update()` |
 | **host.interface** | `.create()` | `.delete()` | `.get()` | `.update()` | `.replace()` |
 | **host.interface.mass** | `.add()` | `.remove()` |
-| **host.mass** | `.add()` | `.remove()` | `.update()` |
 | **host.prototype** | `.create()` | `.delete()` | `.get()` | `.update()` |
 | **httptest** | `.create()` | `.delete()` | `.get()` | `.update()` |
 | **item** | `.create()` | `.delete()` | `.get()` | `.update()` |

@@ -5,7 +5,7 @@
 - [ ] Load config from .env file.
 - [x] ~~Sync version of all methods.~~
 - [x] ~~Throw exceptions.~~ Retrun JSON error.
-- [ ] Auto login.
+- [x] ~~Auto login.~~
 - [x] Auto check version.
 - [ ] Extra methods like .count()
 - [ ] Login, logout shortcut

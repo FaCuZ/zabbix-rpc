@@ -13,7 +13,12 @@
 		"type": "git",
 		"url": "https://github.com/FaCuZ/zabbix-rpc.git"
 	},
-	"keywords": ["zabbix", "jsonrpc", "API", "Monitoring"],
+	"keywords": [
+		"zabbix",
+		"jsonrpc",
+		"API",
+		"Monitoring"
+	],
 	"author": "Facundo Zaldo",
 	"license": "ISC",
 	"dependencies": {
@@ -21,6 +26,6 @@
 	},
 	"devDependencies": {
 		"coveralls": "^3.1.0",
-		"jest": "^26.4.2"
+		"jest": "^26.6.3"
 	}
 }

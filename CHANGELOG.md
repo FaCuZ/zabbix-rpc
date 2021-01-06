@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.2.2 (Aug 28, 2020)
+- Fixed some missing reqs.
+- Updated packages.
+
 ### 1.2.0 (Aug 28, 2020)
 
 - Folder restructure.

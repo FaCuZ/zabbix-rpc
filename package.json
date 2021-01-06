@@ -1,6 +1,6 @@
 {
 	"name": "zabbix-rpc",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"description": "A powerfull and easy to use Zabbix API integrator",
 	"main": "./lib/Zabbix.js",
 	"scripts": {
@@ -22,7 +22,7 @@
 	"author": "Facundo Zaldo",
 	"license": "ISC",
 	"dependencies": {
-		"axios": "^0.20.0"
+		"axios": "^0.21.1"
 	},
 	"devDependencies": {
 		"coveralls": "^3.1.0",

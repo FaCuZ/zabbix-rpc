@@ -1,6 +1,6 @@
 {
 	"name": "zabbix-rpc",
-	"version": "1.2.2",
+	"version": "1.2.3",
 	"description": "A powerfull and easy to use Zabbix API integrator",
 	"main": "./lib/Zabbix.js",
 	"scripts": {

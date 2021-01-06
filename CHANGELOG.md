@@ -1,6 +1,9 @@
 # Changelog
 
-### 1.2.2 (Aug 28, 2020)
+### 1.2.3 (Jan 06, 2021)
+- Fixed typo.
+
+### 1.2.2 (Jan 04, 2021)
 - Fixed some missing reqs.
 - Updated packages.
 

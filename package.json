@@ -22,7 +22,7 @@
 	"author": "Facundo Zaldo",
 	"license": "ISC",
 	"dependencies": {
-		"axios": "^0.20.0"
+		"axios": "^0.21.1"
 	},
 	"devDependencies": {
 		"coveralls": "^3.1.0",

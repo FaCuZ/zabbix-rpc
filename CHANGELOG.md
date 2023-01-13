@@ -1,11 +1,18 @@
 # Changelog
 
+### 1.2.4 (Jan 13, 2023)
+
+- Now allow https on the host.
+- Dependencies have been updated.
+
 ### 1.2.3 (Jan 06, 2021)
+
 - Fixed typo.
 
 ### 1.2.2 (Jan 04, 2021)
+
 - Fixed some missing reqs.
-- Updated packages.
+- Dependencies have been updated.
 
 ### 1.2.0 (Aug 28, 2020)
 

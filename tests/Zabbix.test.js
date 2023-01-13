@@ -29,7 +29,7 @@ test("Make a simple call", () => {
 		"params": [],
 		"id": 123456,
 		"auth": null
-	  }
+	}
 
 	return z.call(rpc).then(data => expect(data.result).toEqual("4.0.0"))
 })

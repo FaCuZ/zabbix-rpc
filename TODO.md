@@ -25,6 +25,13 @@ Progress: 231 of 231 = 100%
 - [x] apiinfo
 	- [x] version
 
+- [ ] auditlog
+	- [ ] get
+
+- [ ] authentication
+	- [ ] get
+	- [ ] update
+
 - [x] application
 	- [x] create
 	- [x] delete
@@ -109,6 +116,9 @@ Progress: 231 of 231 = 100%
 		- [x] get
 		- [x] update
 
+- [ ] hanode
+	- [ ] get
+
 - [x] history
 	- [x] get
 
@@ -126,6 +136,7 @@ Progress: 231 of 231 = 100%
 		- [x] delete
 		- [x] get
 		- [x] update
+		- [ ] propagate
 		- [x] mass
 			- [x] add (massadd)
 			- [x] remove (massremove)
@@ -144,6 +155,10 @@ Progress: 231 of 231 = 100%
 		- [x] delete
 		- [x] get
 		- [x] update
+
+- [ ] housekeeping
+	- [ ] get
+	- [ ] update
 
 - [x] image
 	- [x] create
@@ -174,6 +189,28 @@ Progress: 231 of 231 = 100%
 		- [x] update
 		- [x] item (templatescreenitem)
 			- [x] get
+	- [ ] dashboard (templatedashboard)
+		- [ ] create
+		- [ ] delete
+		- [ ] get
+		- [ ] update
+	- [ ] group (templategroup)
+		- [ ] create
+		- [ ] delete
+		- [ ] get
+		- [ ] propagate
+		- [ ] update
+		- [ ] mass
+			- [ ] add (massadd)
+			- [ ] remove (massremove)
+			- [ ] update (massupdate)
+
+- [ ] token
+	- [ ] create
+	- [ ] delete
+	- [ ] generate
+	- [ ] get
+	- [ ] update
 
 - [x] problem
 	- [x] get
@@ -184,6 +221,24 @@ Progress: 231 of 231 = 100%
 	- [x] get
 	- [x] update
 
+- [ ] regexp
+	- [ ] create
+	- [ ] delete
+	- [ ] get
+	- [ ] update
+
+- [ ] report
+	- [ ] create
+	- [ ] delete
+	- [ ] get
+	- [ ] update
+
+- [ ] role
+	- [ ] create
+	- [ ] delete
+	- [ ] get
+	- [ ] update
+
 - [x] script
 	- [x] create
 	- [x] delete
@@ -191,6 +246,18 @@ Progress: 231 of 231 = 100%
 	- [x] get
 	- [x] getscriptsbyhosts
 	- [x] update
+
+- [ ] settings
+	- [ ] get
+	- [ ] update
+
+
+- [ ] sla
+	- [ ] create
+	- [ ] delete
+	- [ ] get
+	- [ ] getsli
+	- [ ] update
 
 - [x] httptest
 	- [x] create
@@ -225,6 +292,12 @@ Progress: 231 of 231 = 100%
 		- [x] delete
 		- [x] get
 		- [x] update
+	- [ ] rule (discoveryrule)
+		- [ ] copy
+		- [ ] create
+		- [ ] delete
+		- [ ] get
+		- [ ] update
 
 - [x] autoregistration
 	- [x] get
@@ -253,6 +326,7 @@ Progress: 231 of 231 = 100%
 
 - [x] task
 	- [x] create
+	- [ ] get
 
 - [x] user
 	- [x] check (checkauthentication)
@@ -261,12 +335,19 @@ Progress: 231 of 231 = 100%
 	- [x] get
 	- [x] login
 	- [x] logout
+	- [ ] unblock
 	- [x] update
 	- [x] group (usergroup)
 		- [x] create
 		- [x] delete
 		- [x] get
 		- [x] update
+	- [ ] directory (userdirectory)
+		- [ ] create
+		- [ ] delete
+		- [ ] get
+		- [ ] test
+		- [ ] update
 	- [x] macro (usermacro)
 		- [x] create
 		- [x] createglobal

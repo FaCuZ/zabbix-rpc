@@ -7,16 +7,16 @@ async function test() {
 	const z = new Zabbix('localhost/zabbix')
 
 	await z.user.login('user', 'pass')
-	
+
 	console.log("Auth hash:", z.req.auth)
 
 	z.user.logout()
 
 	await z.user.login('user2', 'pass')
-	 	
+
 	z.user.check(z.req.auth).then(show)
-	
-	z.user.get({"output": "extend"}).then(show)	
+
+	z.user.get({"output": "extend"}).then(show)
 
 	z.user.group.get()
 

@@ -16,10 +16,6 @@
     <img alt="npm" src="https://img.shields.io/npm/dt/zabbix-rpc.svg">
   </a>
 
-  <a href="https://inch-ci.org/github/FaCuZ/zabbix-rpc">
-    <img alt="Zabbix-rpc documentation" src="https://inch-ci.org/github/facuz/zabbix-rpc.svg">
-  </a>
-
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/facuz/zabbix-rpc.svg">
 
   <a href="#license">
@@ -77,7 +73,7 @@ const Zabbix = require('zabbix-rpc')
 You can create multiple instances to use different servers or the same server with different users. For example, to create an instance and log in
 
 ```javascript
-const z = new Zabbix('example.com/zabbix')
+const z = new Zabbix('https://example.com/zabbix')
 
 z.user.login('username', 'password')
 ```

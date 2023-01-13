@@ -3,3 +3,4 @@ coverage
 examples/dd.js
 examples/dd2.js
 .vscode
+.vs
